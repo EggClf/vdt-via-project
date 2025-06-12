@@ -1,0 +1,16 @@
+openai
+pandas 
+pydantic
+python-dotenv
+requests
+
+
+openinference-instrumentation
+arize-phoenix-otel
+arize-phoenix
+openai
+httpx<0.28
+openinference-instrumentation-openai
+
+openpyxl
+tqdm==4.65.0
