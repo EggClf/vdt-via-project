@@ -21,7 +21,7 @@ export const BITool = tool({
       .optional()
       .default(false)
       .describe(
-        "Whether to display a visualization chart of the data, only true if the query is a SELECT query that returns data suitable for visualization and user require it."
+        "Whether to display a visualization chart of the data, only true if user require it."
       ),
   }),
   execute: async ({ query, displayChart }) => {
@@ -138,6 +138,59 @@ export const RAGTool = tool({
         }`,
         documents: [],
         documentCount: 0,
+      };
+    }
+  },
+});
+
+// Create text to sql tool
+export const TextToSQLTool = tool({
+  description: "Convert natural language query to SQL query",
+  parameters: z.object({
+    query: z
+      .string()
+      .min(1, "Query cannot be empty")
+      .describe(
+        "The natural language query to convert into SQL. The output will be a valid SQL SELECT statement."
+      ),
+    context: z
+      .string()
+      .describe(
+        "Optional context to help generate the SQL query. This can include information about the database schema, specific tables, column names"
+      ),
+  }),
+  execute: async ({ query, context }) => {
+    try {
+      // Make a request to the /api/text-to-sql endpoint
+      const response = await fetch(`${API_BASE_URL}/api/text2sql`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query: query.trim(), context: context.trim() }),
+        cache: "no-store",
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(
+          `Text to SQL Tool Error: ${
+            errorData.error || `HTTP ${response.status}: ${response.statusText}`
+          }`
+        );
+      }
+
+      const result = await response.json();
+      return {
+        sqlQuery: result.sqlQuery || "",
+      };
+    } catch (error) {
+      console.error("Error using Text to SQL Tool:", error);
+      return {
+        error: `Failed to convert text to SQL: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`,
+        sqlQuery: "",
       };
     }
   },

@@ -1,5 +1,5 @@
 import { model, modelID } from "@/ai/providers";
-import { BITool, RAGTool } from "@/ai/tools";
+import { BITool, RAGTool, TextToSQLTool } from "@/ai/tools";
 import { streamText, UIMessage } from "ai";
 import { get } from "http";
 
@@ -14,13 +14,29 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: model.languageModel(selectedModel),
-    system: `Bạn là trợ lý ảo Viettel Assistant,chuyên cung cấp thông tin và hỗ trợ người dùng bằng việc sử dụng tools,
-      Nếu bạn cần sử dụng BITool thì hãy sử dụng RAGTool trước để lấy thông tin các bảng.
-      Nếu bạn cần sử dụng RAGTool thì hãy nhớ thử lại nếu không có kết quả trả về.`,
+    system: `Bạn là Viettel Assistant, trợ lý ảo chuyên nghiệp được thiết kế để hỗ trợ người dùng bằng cách sử dụng các công cụ tích hợp.
+
+NGUYÊN TẮC SỬ DỤNG TOOLS:
+1. KHI CẦN TRUY VẤN DỮ LIỆU:
+   - LUÔN sử dụng RAGTool TRƯỚC để lấy ngữ cảnh và thông tin từ cơ sở dữ liệu vector
+   - Nếu RAGTool không trả về kết quả trong lần đầu, hãy thử lại với cách diễn đạt khác
+   - Chỉ sử dụng BITool SAU KHI đã có ngữ cảnh từ RAGTool
+
+2. KHI PHÂN TÍCH DỮ LIỆU:
+   - Sử dụng TextToSQLTool để chuyển đổi câu hỏi người dùng thành truy vấn SQL
+   - Kiểm tra kết quả SQL trước khi sử dụng BITool để thực thi truy vấn
+
+3. PHẢN HỒI NGƯỜI DÙNG:
+   - Trình bày thông tin rõ ràng, súc tích và dễ hiểu
+   - Tóm tắt các bước đã thực hiện nếu phù hợp
+   - Đưa ra các đề xuất tiếp theo khi cần thiết
+
+Luôn nỗ lực cung cấp thông tin chính xác và hữu ích nhất cho người dùng.`,
     messages,
     tools: {
       getDataRAG: RAGTool,
       getDataBI: BITool,
+      textToSQL: TextToSQLTool,
     },
     maxSteps: 5,
   });
