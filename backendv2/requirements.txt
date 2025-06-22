@@ -1,0 +1,5 @@
+psycopg2-binary
+python-dotenv
+llama-index
+llama-index-retrievers-bm25
+google-adk

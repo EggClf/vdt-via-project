@@ -1,0 +1,1949 @@
+[
+    {
+        "table_name": "vcc_vhkt.vhkt_import_dt_tp_vtnet",
+        "description": "Dữ liệu doanh thu, tiền phạt VTNet(Viettel Network)",
+        "columns": [
+            {
+                "column_name": "ngay",
+                "data_type": "character varying",
+                "description": "ngày"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh "
+            },
+            {
+                "column_name": "tong_doanh_thu",
+                "data_type": "double precision",
+                "description": "Tổng doanh thu.cách tính = tổng tất cả doanh thu"
+            },
+            {
+                "column_name": "doanh_thu_vhkt_theo_don_gia",
+                "data_type": "bigint",
+                "description": "Doanh thu vận hành khai thác theo đơn giá. cách tính = Tiền vận hành khai thác tại trạm VHKT + Giá trị quyết toán trước thuế của trạm tạm "
+            },
+            {
+                "column_name": "tong_phat",
+                "data_type": "double precision",
+                "description": "Tổng số tiền phạt áp dụng. Cách tính = Tổng giá trị phạt KPI + Tổng giá trị Giá trị phạt SLA"
+            },
+            {
+                "column_name": "giam_tru_kpi",
+                "data_type": "double precision",
+                "description": "Tổng giá trị phạt KPI. Cách tính = tổng tất cả Giá trị phạt KPI"
+            },
+            {
+                "column_name": "giam_tru_sla",
+                "data_type": "double precision",
+                "description": "Tổng giá trị Giá trị phạt SLA cách tính = Tổng tất cả Giá trị phạt SLA"
+            },
+            {
+                "column_name": "tien_vhkt_tram_vhkt",
+                "data_type": "bigint",
+                "description": "Tiền vận hành khai thác tại trạm VHKT"
+            },
+            {
+                "column_name": "gia_tri_quyet_toan_truoc_thue_tram_tam",
+                "data_type": "bigint",
+                "description": "Giá trị quyết toán trước thuế của trạm tạm"
+            },
+            {
+                "column_name": "gia_tri_tram_trong_coi",
+                "data_type": "integer",
+                "description": "Giá trị trạm trông coi"
+            },
+            {
+                "column_name": "doanh_thu_tram_tam_co_dong",
+                "data_type": "bigint",
+                "description": "Doanh thu trạm tạm và cơ động"
+            },
+            {
+                "column_name": "chi_phi_xang_dau",
+                "data_type": "bigint",
+                "description": "Chi phí xăng dầu"
+            },
+            {
+                "column_name": "bao_duong_may_phat_dien_truoc_giam_tru",
+                "data_type": "integer",
+                "description": "Doanh thu bảo dưỡng máy phát điện trước khi giảm trừ"
+            },
+            {
+                "column_name": "bao_duong_dieu_hoa_truoc_giam_tru",
+                "data_type": "integer",
+                "description": "Doanh thu bảo dưỡng điều hòa trước khi giảm trừ"
+            },
+            {
+                "column_name": "sua_chua_dieu_hoa_may_phat_dien_truoc_giam_tru",
+                "data_type": "double precision",
+                "description": "Doanh thu sửa chữa điều hòa, máy phát điện trước khi giảm trừ"
+            },
+            {
+                "column_name": "bao_duong_thong_gio_loc_bui",
+                "data_type": "integer",
+                "description": "Doanh thu bảo dưỡng hệ thống thông gió lọc bụi"
+            },
+            {
+                "column_name": "dong_goi_bao_bi",
+                "data_type": "double precision",
+                "description": "Doanh thu đóng gói bao bì"
+            },
+            {
+                "column_name": "van_chuyen",
+                "data_type": "double precision",
+                "description": "Doanh thu vận chuyển"
+            },
+            {
+                "column_name": "lap_dat_bao_duong_cung_co_co_dien",
+                "data_type": "double precision",
+                "description": "Doanh thu lắp đặt, bảo dưỡng, củng cố cơ điện"
+            },
+            {
+                "column_name": "viec_dot_xuat",
+                "data_type": "double precision",
+                "description": "Doanh thu các công việc đột xuất"
+            },
+            {
+                "column_name": "toi_uu_mang_luoi",
+                "data_type": "integer",
+                "description": "Doanh thu tối ưu mạng lưới"
+            },
+            {
+                "column_name": "thu_hoi_di_doi_thiet_bi",
+                "data_type": "integer",
+                "description": "Doanh thu thu hồi và di dời thiết bị"
+            },
+            {
+                "column_name": "cung_co_bao_duong_nha_tram",
+                "data_type": "double precision",
+                "description": "Doanh thu củng cố và bảo dưỡng nhà trạm"
+            },
+            {
+                "column_name": "bao_duong_cung_co_bang_rong_co_dinh",
+                "data_type": "integer",
+                "description": "Doanh thu bảo dưỡng và củng cố băng rộng cố định"
+            },
+            {
+                "column_name": "bao_duong_cung_co_truyen_dan",
+                "data_type": "double precision",
+                "description": "Doanh thu bảo dưỡng và củng cố truyền dẫn"
+            },
+            {
+                "column_name": "ung_cuu_thong_tin_mat_dien_dien_rong",
+                "data_type": "smallint",
+                "description": "Doanh thu ứng cứu thông tin mất điện diện rộng"
+            },
+            {
+                "column_name": "gia_tri_phat_gdtt_tram_thuong",
+                "data_type": "double precision",
+                "description": "Giá trị phạt GĐTT tại trạm thường"
+            },
+            {
+                "column_name": "gia_tri_phat_gdtt_tram_uu_tien",
+                "data_type": "double precision",
+                "description": "Giá trị phạt KPI tại trạm ưu tiên"
+            },
+            {
+                "column_name": "gia_tri_phat_submin_cdbr",
+                "data_type": "double precision",
+                "description": "Giá trị phạt KPI do Sub*min CĐBR"
+            },
+            {
+                "column_name": "gia_tri_phat_so_su_co_truyen_dan",
+                "data_type": "double precision",
+                "description": "Giá trị phạt KPI số sự cố truyền dẫn"
+            },
+            {
+                "column_name": "giam_sat_dieu_hanh_xlsc",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA do giám sát, điều hành xử lý sự cố"
+            },
+            {
+                "column_name": "cap_nhap_co_so_du_lieu_mang_luoi",
+                "data_type": "double precision",
+                "description": "Giá trị phạt SLA cập nhật cơ sở dữ liệu mạng lưới"
+            },
+            {
+                "column_name": "bao_duong_dinh_ky",
+                "data_type": "double precision",
+                "description": "Giá trị Giá trị phạt SLA bảo dưỡng định kỳ"
+            },
+            {
+                "column_name": "cung_co_nang_cap",
+                "data_type": "integer",
+                "description": "Giá trị Giá trị phạt SLA củng cố, nâng cấp"
+            },
+            {
+                "column_name": "qlhc_chuyen_sau_kscl",
+                "data_type": "smallint",
+                "description": "Giá trị Giá trị phạt SLA quản lý hành chính chuyên sâu sau KSCL"
+            },
+            {
+                "column_name": "yeu_cau_quan_ly_hang_vat_tu_uctt",
+                "data_type": "integer",
+                "description": "Giá trị Giá trị phạt SLA yêu cầu quản lý hàng vật tư ứng cứu thông tin"
+            },
+            {
+                "column_name": "bo_may_quan_tri",
+                "data_type": "double precision",
+                "description": "Giá trị Giá trị phạt SLA liên quan đến bộ máy quản trị"
+            },
+            {
+                "column_name": "phat_truc_tiep",
+                "data_type": "double precision",
+                "description": "Giá trị phạt SLA trực tiếp"
+            },
+            {
+                "column_name": "bao_duong_sua_chua_dieu_hoa_may_phat_dien",
+                "data_type": "double precision",
+                "description": "Giá trị phạt SLA bảo dưỡng sửa chữa điều hòa, máy phát điện"
+            },
+            {
+                "column_name": "sla_quan_ly_kho_tai_san",
+                "data_type": "double precision",
+                "description": "Giá trị phạt SLA quản lý kho và tài sản"
+            },
+            {
+                "column_name": "quy_hoach_thiet_ke_toi_uu",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA quy hoạch, thiết kế tối ưu"
+            },
+            {
+                "column_name": "qhtktu_vo_tuyen",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA quản lý kỹ thuật vô tuyến"
+            },
+            {
+                "column_name": "co_dien_khac",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA cơ điện khác"
+            },
+            {
+                "column_name": "dau_viec_khoi_luong_khac",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA đầu việc khối lượng khác"
+            },
+            {
+                "column_name": "qhtktu_brcd_truyen_hinh",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA quản lý kỹ thuật BRCĐ và truyền hình"
+            },
+            {
+                "column_name": "thu_hoi_thiet_bi",
+                "data_type": "integer",
+                "description": "Giá trị phạt SLA thu hồi thiết bị"
+            },
+            {
+                "column_name": "tong_vi_tri",
+                "data_type": "smallint",
+                "description": "Tổng số vị trí trạm hoặc thiết bị"
+            },
+            {
+                "column_name": "loai_1",
+                "data_type": "smallint",
+                "description": "Số vị trí loại 1"
+            },
+            {
+                "column_name": "loai_2",
+                "data_type": "smallint",
+                "description": "Số vị trí loại 2"
+            },
+            {
+                "column_name": "loai_3",
+                "data_type": "smallint",
+                "description": "Số vị trí loại 3"
+            },
+            {
+                "column_name": "loai_4",
+                "data_type": "smallint",
+                "description": "Số vị trí loại 4"
+            },
+            {
+                "column_name": "loai_5",
+                "data_type": "smallint",
+                "description": "Số vị trí loại 5"
+            },
+            {
+                "column_name": "loai_6",
+                "data_type": "smallint",
+                "description": "Số vị trí loại 6"
+            },
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            }
+        ],
+        "sample_questions": [
+            "Tổng tiền phạt hàng năm chiếm bao nhiêu % so với doanh thu hàng năm của VTN?",
+            "Xu hướng tiền phạt qua các quý/năm như thế nào? Có tăng hay giảm?",
+            "Top 3 loại lỗi/phạt nào chiếm tỷ trọng cao nhất trong tổng tiền phạt?",
+            "Phạt do GĐTT trạm ưu tiên chủ yếu do nguyên nhân nào (nhân sự, thiết bị, quy trình)?",
+            "Tỷ lệ phạt Sub*min CĐBR có mối tương quan với số lượng sự cố truyền dẫn không?",
+            "Phạt do bảo dưỡng định kỳ không đạt tiêu chuẩn chiếm bao nhiêu % tổng phạt?",
+            "Việc giám sát điều hành xử lý sự cố đã giúp giảm bao nhiêu % tiền phạt so với trước đây?",
+            "Phạt trực tiếp thường liên quan đến lỗi nào nhiều nhất (nhân sự, thiết bị, quy trình)?",
+            "Nếu tăng ngân sách củng cố, nâng cấp 20%, có thể giảm được bao nhiêu % tiền phạt?",
+            "Các đầu việc nào (QLHC KSCL, quản lý kho, QHTKTU...) nếu cải thiện sẽ giảm phạt nhiều nhất?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_kpi_duy_tri_cdbr_huyen",
+        "description": "Tổng hợp KPI xử lý sự cố khách hàng cố định băng rộng mức huyện",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "ten_huyen",
+                "data_type": "character varying",
+                "description": "Tên huyện"
+            },
+            {
+                "column_name": "ten_tinh",
+                "data_type": "character varying",
+                "description": "Tên tỉnh"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh"
+            },
+            {
+                "column_name": "ma_huyen",
+                "data_type": "character varying",
+                "description": "Mã huyện"
+            },
+            {
+                "column_name": "so_thue_bao_ftth_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao FTTH phát sinh cước"
+            },
+            {
+                "column_name": "so_thue_bao_khac_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao khác phát sinh cước"
+            },
+            {
+                "column_name": "so_phan_anh_phat_sinh_trong_thang_dich_vu_ftth",
+                "data_type": "smallint",
+                "description": "Số phản ánh phát sinh trong tháng dịch vụ FTTH"
+            },
+            {
+                "column_name": "so_phan_anh_phat_sinh_trong_thang_dich_vu_khac",
+                "data_type": "smallint",
+                "description": "Số phản ánh phát sinh trong tháng dịch vụ khác"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_thang",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong tháng"
+            },
+            {
+                "column_name": "tong_sc_loai_cac_truong_hop_khong_tinh_3h",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố loại các trường hợp không tính 3 giờ"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_3_gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 3 giờ"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_10_gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 10 giờ"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 1 ngày"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_2_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 2 ngày"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 3 ngày"
+            },
+            {
+                "column_name": "tong_su_hot_co_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố HOT đã xử lý"
+            },
+            {
+                "column_name": "tong_su_co_hot_da_xu_ly_xu_ly_trong_3_gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố HOT đã xử lý trong 3 giờ"
+            },
+            {
+                "column_name": "tong_su_co_vip_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố VIP đã xử lý"
+            },
+            {
+                "column_name": "tong_su_co_vip_da_xu_ly_trong_3gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố VIP đã xử lý trong 3 giờ"
+            },
+            {
+                "column_name": "ty_le_pakh_10000tb_ngay_dich_vu_ftth",
+                "data_type": "double precision",
+                "description": "Tỷ lệ phản ánh khách hàng trên 10.000 thuê bao mỗi ngày - dịch vụ FTTH. Cách tính: (Số phản ánh / (Số thuê bao / 10,000))"
+            },
+            {
+                "column_name": "ty_le_pakh_10000tb_ngay_dich_vu_khac",
+                "data_type": "double precision",
+                "description": "Tỷ lệ phản ánh khách hàng trên 10.000 thuê bao mỗi ngày - dịch vụ khác. Cách tính: (Số phản ánh / (Số thuê bao / 10,000))"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 3 giờ. Cách tính: (Tổng sự cố xử lý ≤3h / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_10h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 10 giờ. Cách tính: (Tổng sự cố xử lý ≤10h / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 1 ngày. Cách tính: (Tổng sự cố xử lý ≤1 ngày / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_2_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 2 ngày. Cách tính: (Tổng sự cố xử lý ≤2 ngày / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 3 ngày. Cách tính: (Tổng sự cố xử lý ≤3 ngày / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_hot_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố HOT trong 3 giờ. Cách tính: (Tổng sự cố HOT xử lý ≤3h / Tổng sự cố HOT) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_vip_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố VIP trong 3 giờ. Cách tính: (Tổng sự cố VIP xử lý ≤3h / Tổng sự cố VIP) * 100 (%)"
+            },
+            {
+                "column_name": "tong_su_co_phat_sinh_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố phát sinh có hẹn"
+            },
+            {
+                "column_name": "tong_su_co_duoc_xu_ly_dung_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố được xử lý đúng hẹn"
+            },
+            {
+                "column_name": "ty_le_su_co_duoc_xu_ly_dung_hen",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố được xử lý đúng hẹn. Cách tính: (Tổng sự cố xử lý đúng hẹn / Tổng sự cố có hẹn) * 100 (%)"
+            },
+            {
+                "column_name": "trung_binh_thoi_gian_xlsc",
+                "data_type": "double precision",
+                "description": "Thời gian trung bình xử lý sự cố"
+            },
+            {
+                "column_name": "target_kpi_xlsc_trong_3_gio_phan_tram",
+                "data_type": "double precision",
+                "description": "Mục tiêu KPI xử lý sự cố trong 3 giờ (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_ket_qua_kpi_xlsc_trong_3_gio",
+                "data_type": "character varying",
+                "description": "Đánh giá kết quả KPI xử lý sự cố trong 3 giờ"
+            },
+            {
+                "column_name": "target_kpi_xlsc_trong_10_gio_phan_tram",
+                "data_type": "double precision",
+                "description": "Mục tiêu KPI xử lý sự cố trong 10 giờ (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_ket_qua_kpi_xlsc_trong_10_gio",
+                "data_type": "character varying",
+                "description": "Đánh giá kết quả KPI xử lý sự cố trong 10 giờ"
+            },
+            {
+                "column_name": "target_kpi_xlsc_trong_1_ngay_phan_tram",
+                "data_type": "smallint",
+                "description": "Mục tiêu KPI xử lý sự cố trong 1 ngày (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_ket_qua_kpi_xlsc_trong_1_ngay",
+                "data_type": "character varying",
+                "description": "Đánh giá kết quả KPI xử lý sự cố trong 1 ngày"
+            },
+            {
+                "column_name": "target_kpi_xlsc_hot_trong_3_gio_phan_tram",
+                "data_type": "double precision",
+                "description": "Mục tiêu KPI xử lý sự cố HOT trong 3 giờ (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_ket_qua_kpi_xlsc_hot_trong_3_gio",
+                "data_type": "character varying",
+                "description": "Đánh giá kết quả KPI xử lý sự cố HOT trong 3 giờ"
+            },
+            {
+                "column_name": "target_kpi_xlsc_vip_trong_3_gio_phan_tram",
+                "data_type": "double precision",
+                "description": "Mục tiêu KPI xử lý sự cố VIP trong 3 giờ (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_ket_qua_kpi_xlsc_vip_trong_3_gio",
+                "data_type": "character varying",
+                "description": "Đánh giá kết quả KPI xử lý sự cố VIP trong 3 giờ"
+            },
+            {
+                "column_name": "target_kpi_xlsc_dung_hen_voi_khach_hang_phan_tram",
+                "data_type": "smallint",
+                "description": "Mục tiêu KPI xử lý sự cố đúng hẹn với khách hàng (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_ket_qua_kpi_xlsc_dung_hen_voi_khach_hang",
+                "data_type": "character varying",
+                "description": "Đánh giá kết quả KPI xử lý sự cố đúng hẹn với khách hàng"
+            }
+        ],
+        "sample_questions": [
+            "Tỷ lệ PAKH toàn quốc trong năm 2024 là bao nhiêu",
+            "Tỷ lệ PAKH toàn quốc trong năm 2024 theo từng tháng là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại toàn quốc trong năm 2024 là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại toàn quốc trong năm 2024 theo từng tháng là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại của AGG năm 2024 là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Số PAKH phát sinh năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 3h năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Số lượng sự cố phát sinh của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của Toàn quốc là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của AGG là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của AGG theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong …. năm 2024 của AGG theo từng tháng là bao nhiêu?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_kpi_duy_tri_cdbr_tinh",
+        "description": "Tổng hợp KPI xử lý sự cố khách hàng cố định băng rộng mức tỉnh",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "khu_vuc",
+                "data_type": "character varying",
+                "description": "Khu vực"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh"
+            },
+            {
+                "column_name": "ten_tinh",
+                "data_type": "character varying",
+                "description": "Tên tỉnh"
+            },
+            {
+                "column_name": "so_thue_bao_ftth_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao FTTH phát sinh cước"
+            },
+            {
+                "column_name": "so_thue_bao_khac_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao khác phát sinh cước"
+            },
+            {
+                "column_name": "so_phan_anh_phat_sinh_trong_thang_dich_vu_ftth",
+                "data_type": "smallint",
+                "description": "Số phản ánh phát sinh trong tháng dịch vụ FTTH"
+            },
+            {
+                "column_name": "so_phan_anh_phat_sinh_trong_thang_dich_vu_khac",
+                "data_type": "smallint",
+                "description": "Số phản ánh phát sinh trong tháng dịch vụ khác"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_thang",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong tháng"
+            },
+            {
+                "column_name": "tong_sc_loai_cac_truong_hop_khong_tinh_3h",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố loại các trường hợp không tính 3 giờ"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_3_gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 3 giờ"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_10_gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 10 giờ"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 1 ngày"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_2_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 2 ngày"
+            },
+            {
+                "column_name": "tong_su_co_da_xu_ly_trong_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố đã xử lý trong 3 ngày"
+            },
+            {
+                "column_name": "tong_su_hot_co_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố HOT đã xử lý"
+            },
+            {
+                "column_name": "tong_su_co_hot_da_xu_ly_xu_ly_trong_3_gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố HOT đã xử lý trong 3 giờ"
+            },
+            {
+                "column_name": "tong_su_co_vip_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố VIP đã xử lý"
+            },
+            {
+                "column_name": "tong_su_co_vip_da_xu_ly_trong_3gio",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố VIP đã xử lý trong 3 giờ"
+            },
+            {
+                "column_name": "ty_le_pakh_10000tb_ngay_dich_vu_ftth",
+                "data_type": "double precision",
+                "description": "Tỷ lệ phản ánh khách hàng trên 10.000 thuê bao mỗi ngày - dịch vụ FTTH. Cách tính: (Số phản ánh / (Số thuê bao / 10,000))"
+            },
+            {
+                "column_name": "ty_le_pakh_10000tb_ngay_dich_vu_khac",
+                "data_type": "double precision",
+                "description": "Tỷ lệ phản ánh khách hàng trên 10.000 thuê bao mỗi ngày - dịch vụ khác. Cách tính: (Số phản ánh / (Số thuê bao / 10,000))"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 3 giờ. Cách tính: (Tổng sự cố xử lý ≤3h / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_10h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 10 giờ. Cách tính: (Tổng sự cố xử lý ≤10h / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 1 ngày. Cách tính: (Tổng sự cố xử lý ≤1 ngày / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_2_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 2 ngày. Cách tính: (Tổng sự cố xử lý ≤2 ngày / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố trong 3 ngày. Cách tính: (Tổng sự cố xử lý ≤3 ngày / Tổng sự cố) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_hot_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố HOT trong 3 giờ. Cách tính: (Tổng sự cố HOT xử lý ≤3h / Tổng sự cố HOT) * 100 (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_vip_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố VIP trong 3 giờ. Cách tính: (Tổng sự cố VIP xử lý ≤3h / Tổng sự cố VIP) * 100 (%)"
+            },
+            {
+                "column_name": "tong_su_co_phat_sinh_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố phát sinh có hẹn"
+            },
+            {
+                "column_name": "tong_su_co_duoc_xu_ly_dung_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố được xử lý đúng hẹn"
+            },
+            {
+                "column_name": "ty_le_su_co_duoc_xu_ly_dung_hen",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố được xử lý đúng hẹn. Cách tính: (Tổng sự cố xử lý đúng hẹn / Tổng sự cố có hẹn) * 100 (%)"
+            },
+            {
+                "column_name": "trung_binh_thoi_gian_xlsc",
+                "data_type": "double precision",
+                "description": "Thời gian trung bình xử lý sự cố"
+            }
+        ],
+        "sample_questions": [
+            "Tỷ lệ PAKH toàn quốc trong năm 2024 là bao nhiêu",
+            "Tỷ lệ PAKH toàn quốc trong năm 2024 theo từng tháng là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại toàn quốc trong năm 2024 là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại toàn quốc trong năm 2024 theo từng tháng là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại của AGG năm 2024 là bao nhiêu",
+            "Tỷ lệ sự cố lặp lại của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Số PAKH phát sinh năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 3h năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Số lượng sự cố phát sinh của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của Toàn quốc là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của AGG là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong 10h năm 2024 của AGG theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố trong …. năm 2024 của AGG theo từng tháng là bao nhiêu?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_kpi_sc_cd_cdbr_huyen",
+        "description": "Tổng hợp KPI xử lý sự cố khách hàng cố định băng rộng mức huyện",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "ten_huyen",
+                "data_type": "character varying",
+                "description": "Tên huyện"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh"
+            },
+            {
+                "column_name": "ma_huyen",
+                "data_type": "character varying",
+                "description": "Mã huyện"
+            },
+            {
+                "column_name": "so_thue_bao_ftth_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao FTTH phát sinh cước"
+            },
+            {
+                "column_name": "so_thue_bao_khac_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao khác phát sinh cước"
+            },
+            {
+                "column_name": "so_phan_anh_chu_dong_phat_sinh_trong_thang_dich_vu_ftth",
+                "data_type": "smallint",
+                "description": "Số phản ánh chủ động phát sinh trong tháng dịch vụ FTTH"
+            },
+            {
+                "column_name": "so_phan_anh_chu_dong_phat_sinh_trong_thang_dich_vu_khac",
+                "data_type": "smallint",
+                "description": "Số phản ánh chủ động phát sinh trong tháng dịch vụ khác"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_thang",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động đã xử lý trong tháng"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_10h",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động đã xử lý trong 10h"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động đã xử lý trong 1 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_2_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động đã xử lý trong 2 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động đã xử lý trong 3 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_hot_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động HOT đã xử lý"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_hot_da_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động HOT đã xử lý trong 3 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_vip_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động VIP đã xử lý"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_vip_da_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động VIP đã xử lý trong 3 ngày"
+            },
+            {
+                "column_name": "ty_le_pakh_cd_10000tb_ngay_dich_vu_ftth",
+                "data_type": "double precision",
+                "description": "Tỷ lệ PAKH chủ động 10,000TB ngày dịch vụ FTTH. Cách tính: (Số PAKH/Ngày / Tổng TB PSC) * 10,000"
+            },
+            {
+                "column_name": "ty_le_pakh_cd_10000tb_ngay_dich_vu_khac",
+                "data_type": "double precision",
+                "description": "Tỷ lệ PAKH chủ động 10,000TB ngày dịch vụ khác. Cách tính: (Số PAKH/Ngày / Tổng TB PSC) * 10,000"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_10h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố chủ động trong 10h. Cách tính: (Số sự cố xử lý ≤10h / Tổng số sự cố cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố chủ động trong 1 ngày. Cách tính: (Số sự cố xử lý ≤1 ngày / Tổng số sự cố cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_2_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố chủ động trong 2 ngày. Cách tính: (Số sự cố xử lý ≤2 ngày / Tổng số sự cố cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố chủ động trong 3 ngày. Cách tính: (Số sự cố xử lý ≤3 ngày / Tổng số sự cố cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_hot_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố chủ động HOT trong 3h. Cách tính: (Số sự cố HOT xử lý ≤3h / Tổng số sự cố HOT cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_vip_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thực hiện sự cố chủ động VIP trong 3h. Cách tính: (Số sự cố VIP xử lý ≤3h / Tổng số sự cố VIP cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "tong_so_su_co_chu_dong_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động có hẹn"
+            },
+            {
+                "column_name": "tong_so_su_co_chu_dong_dung_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động đúng hẹn"
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_dung_hen_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố chủ động đúng hẹn. Cách tính: (Số sự cố đúng hẹn / Số sự cố có hẹn) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "thoi_gian_trung_binh_xlsc_chu_dong",
+                "data_type": "double precision",
+                "description": "Thời gian trung bình xử lý sự cố chủ động"
+            },
+            {
+                "column_name": "target_xlsc_chu_dong_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Target xử lý sự cố chủ động trong 1 ngày (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_xlsc_chu_dong_trong_1_ngay",
+                "data_type": "character varying",
+                "description": "Đánh giá xử lý sự cố chủ động trong 1 ngày"
+            },
+            {
+                "column_name": "target_xlsc_chu_dong_trong_3_ngay_phan_tram",
+                "data_type": "smallint",
+                "description": "Target xử lý sự cố chủ động trong 3 ngày (giá trị %)"
+            },
+            {
+                "column_name": "danh_gia_xlsc_chu_dong_trong_3_ngay",
+                "data_type": "character varying",
+                "description": "Đánh giá xử lý sự cố chủ động trong 3 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chat_luong_dich_vu_toi",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chất lượng dịch vụ tối"
+            },
+            {
+                "column_name": "tong_xlsc_chat_luong_toi_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng xử lý sự cố chất lượng tối trong 1 ngày"
+            },
+            {
+                "column_name": "tong_xlsc_chu_dong_chat_luong_toi_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng xử lý sự cố chủ động chất lượng tối trong 3 ngày"
+            },
+            {
+                "column_name": "ty_le_xlsc_chu_dong_chat_luong_toi_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ xử lý sự cố chủ động chất lượng tối trong 1 ngày. Cách tính: (Số xử lý ≤1 ngày / Tổng số cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_xlsc_chu_dong_chat_luong_toi_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ xử lý sự cố chủ động chất lượng tối trong 3 ngày. Cách tính: (Số xử lý ≤3 ngày / Tổng số cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_mat_dich_vu",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động mất dịch vụ"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_mat_dich_vu_xu_ly_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động mất dịch vụ xử lý trong 1 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_mat_dich_vu_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động mất dịch vụ xử lý trong 3 ngày"
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_mat_dich_vu_xu_ly_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố mất dịch vụ xử lý trong 1 ngày. Cách tính: (Số xử lý ≤1 ngày / Tổng số cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_mat_dich_vu_xu_ly_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố mất dịch vụ xử lý trong 3 ngày. Cách tính: (Số xử lý ≤3 ngày / Tổng số cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_xu_ly_port_kem",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động xử lý port kém"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_xu_ly_port_kem_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động xử lý port kém trong 1 ngày"
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_xu_ly_port_kem_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng sự cố chủ động xử lý port kém trong 3 ngày"
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_xu_ly_port_kem_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ xử lý port kém trong 1 ngày. Cách tính: (Số xử lý ≤1 ngày / Tổng số cần xử lý) * 100 (giá trị %)"
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_xu_ly_port_kem_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ xử lý port kém trong 3 ngày. Cách tính: (Số xử lý ≤3 ngày / Tổng số cần xử lý) * 100 (giá trị %)"
+            }
+        ],
+        "sample_questions": [
+            "Số sự cố chủ động phát sinh năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố chủ động trong 1 ngày năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Số sự cố chủ động phát sinh của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố chủ động trong 1 ngày của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố chủ động trong 2 ngày của AGG năm 2024 theo từng tháng là bao nhiêu?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_kpi_sc_cd_cdbr_tinh",
+        "description": "Tổng hợp KPI sự cố chủ động mảng cố định băng rộng mức tỉnh",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "khu_vuc",
+                "data_type": "character varying",
+                "description": "Khu vực."
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh."
+            },
+            {
+                "column_name": "ten_tinh",
+                "data_type": "character varying",
+                "description": "Tên tỉnh."
+            },
+            {
+                "column_name": "so_thue_bao_ftth_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao FTTH phát sinh cước trong tháng."
+            },
+            {
+                "column_name": "so_thue_bao_khac_phat_sinh_cuoc",
+                "data_type": "integer",
+                "description": "Số thuê bao khác phát sinh cước trong tháng."
+            },
+            {
+                "column_name": "so_phan_anh_chu_dong_phat_sinh_trong_thang_dich_vu_ftth",
+                "data_type": "smallint",
+                "description": "Số phản ánh chủ động phát sinh trong tháng đối với dịch vụ FTTH."
+            },
+            {
+                "column_name": "so_phan_anh_chu_dong_phat_sinh_trong_thang_dich_vu_khac",
+                "data_type": "smallint",
+                "description": "Số phản ánh chủ động phát sinh trong tháng đối với các dịch vụ khác."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_10h",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động đã xử lý trong vòng 10 giờ."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động đã xử lý trong vòng 1 ngày."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_2_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động đã xử lý trong vòng 2 ngày."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_da_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động đã xử lý trong vòng 3 ngày."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_hot_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động nhóm HOT đã xử lý."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_hot_da_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố nhóm HOT đã xử lý trong vòng 3 ngày."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_vip_da_xu_ly",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động nhóm VIP đã xử lý."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_vip_da_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố nhóm VIP đã xử lý trong vòng 3 ngày."
+            },
+            {
+                "column_name": "ty_le_pakh_10000tb_ngay_dich_vu_ftth",
+                "data_type": "double precision",
+                "description": "Tỷ lệ PAKH trên 10,000 TB PSC/ngày dịch vụ FTTH. Cách tính: (Số PAKH / Tổng số TB FTTH PSC) * 10,000."
+            },
+            {
+                "column_name": "ty_le_pakh_10000tb_ngay_dich_vu_khac",
+                "data_type": "double precision",
+                "description": "Tỷ lệ PAKH trên 10,000 TB PSC/ngày dịch vụ khác. Cách tính: (Số PAKH / Tổng số TB khác PSC) * 10,000."
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_10h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố chủ động được xử lý trong 10 giờ (%). Cách tính: (Số sự cố xử lý trong 10h / Tổng số sự cố) * 100."
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố chủ động được xử lý trong 1 ngày (%). Cách tính: (Số sự cố xử lý trong 1 ngày / Tổng số sự cố) * 100."
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_2_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố chủ động được xử lý trong 2 ngày (%). Cách tính: (Số sự cố xử lý trong 2 ngày / Tổng số sự cố) * 100."
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố chủ động được xử lý trong 3 ngày (%). Cách tính: (Số sự cố xử lý trong 3 ngày / Tổng số sự cố) * 100."
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_hot_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố nhóm HOT được xử lý trong 3 giờ (%). Cách tính: (Số sự cố HOT xử lý trong 3h / Tổng số sự cố HOT) * 100."
+            },
+            {
+                "column_name": "ty_le_thuc_hien_su_co_chu_dong_vip_trong_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố nhóm VIP được xử lý trong 3 giờ (%). Cách tính: (Số sự cố VIP xử lý trong 3h / Tổng số sự cố VIP) * 100."
+            },
+            {
+                "column_name": "tong_so_su_co_chu_dong_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động có hẹn."
+            },
+            {
+                "column_name": "tong_so_su_co_chu_dong_dung_hen",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động đúng hẹn."
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_dung_hen_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố chủ động đúng hẹn (%). Cách tính: (Số sự cố đúng hẹn / Tổng số sự cố có hẹn) * 100."
+            },
+            {
+                "column_name": "thoi_gian_trung_binh_xlsc_chu_dong",
+                "data_type": "double precision",
+                "description": "Thời gian trung bình xử lý sự cố chủ động."
+            },
+            {
+                "column_name": "tong_su_co_chat_luong_dich_vu_toi",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chất lượng dịch vụ tối."
+            },
+            {
+                "column_name": "tong_xlsc_chat_luong_toi_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số XLSC chất lượng tối trong vòng 1 ngày."
+            },
+            {
+                "column_name": "tong_xlsc_chu_dong_chat_luong_toi_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số XLSC chủ động chất lượng tối trong vòng 3 ngày."
+            },
+            {
+                "column_name": "ty_le_xlsc_chu_dong_chat_luong_toi_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ XLSC chủ động chất lượng tối trong 1 ngày (%). Cách tính: (Số XLSC chất lượng tối trong 1 ngày / Tổng số XLSC chủ động) * 100."
+            },
+            {
+                "column_name": "ty_le_xlsc_chu_dong_chat_luong_toi_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ XLSC chủ động chất lượng tối trong 3 ngày (%). Cách tính: (Số XLSC chất lượng tối trong 3 ngày / Tổng số XLSC chủ động) * 100."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_mat_dich_vu",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động mất dịch vụ."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_mat_dich_vu_xu_ly_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố mất dịch vụ xử lý trong 1 ngày."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_mat_dich_vu_xu_ly_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố mất dịch vụ xử lý trong 3 ngày."
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_mat_dich_vu_xu_ly_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố mất dịch vụ xử lý trong 1 ngày (%). Cách tính: (Sự cố mất dịch vụ xử lý trong 1 ngày / Tổng số sự cố mất dịch vụ) * 100."
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_mat_dich_vu_xu_ly_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố mất dịch vụ xử lý trong 3 ngày (%). Cách tính: (Sự cố mất dịch vụ xử lý trong 3 ngày / Tổng số sự cố mất dịch vụ) * 100."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_xu_ly_port_kem",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố chủ động xử lý Port kém."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_xu_ly_port_kem_trong_1_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố xử lý Port kém trong vòng 1 ngày."
+            },
+            {
+                "column_name": "tong_su_co_chu_dong_xu_ly_port_kem_trong_3_ngay",
+                "data_type": "smallint",
+                "description": "Tổng số sự cố xử lý Port kém trong vòng 3 ngày."
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_xu_ly_port_kem_trong_1_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố xử lý Port kém trong 1 ngày (%). Cách tính: (Sự cố xử lý Port kém trong 1 ngày / Tổng số sự cố Port kém) * 100."
+            },
+            {
+                "column_name": "ty_le_su_co_chu_dong_xu_ly_port_kem_trong_3_ngay_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ sự cố xử lý Port kém trong 3 ngày (%). Cách tính: (Sự cố xử lý Port kém trong 3 ngày / Tổng số sự cố Port kém) * 100."
+            },
+            {
+                "column_name": "trung_binh_thoi_gian_xlsc_chu_dong_port_kem",
+                "data_type": "double precision",
+                "description": "Thời gian trung bình xử lý sự cố Port kém."
+            }
+        ],
+        "sample_questions": [
+            "Số sự cố chủ động phát sinh năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố chủ động trong 1 ngày năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Số sự cố chủ động phát sinh của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố chủ động trong 1 ngày của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ xử lý sự cố chủ động trong 2 ngày của AGG năm 2024 theo từng tháng là bao nhiêu?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_kpi_tkm_cdbr_huyen",
+        "description": "Tổng hợp KPI phát triển mới khách hàng cố định băng rộng mức huyện",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh"
+            },
+            {
+                "column_name": "ten_huyen",
+                "data_type": "character varying",
+                "description": "Tên huyện"
+            },
+            {
+                "column_name": "ma_huyen",
+                "data_type": "character varying",
+                "description": "Mã huyện"
+            },
+            {
+                "column_name": "ten_tinh",
+                "data_type": "character varying",
+                "description": "Tên tỉnh"
+            },
+            {
+                "column_name": "tong_thue_bao_nghiem_thu",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao nghiệm thu"
+            },
+            {
+                "column_name": "tong_thue_bao_nghiem_thu_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao nghiệm thu đường dây mới"
+            },
+            {
+                "column_name": "tong_thue_bao_nghiem_thu_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao nghiệm thu đường dây có sẵn"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_khong_hen_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn không hẹn đường dây mới"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_khong_hen_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn không hẹn đường dây có sẵn"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn có hẹn"
+            },
+            {
+                "column_name": "tong_trien_khai_thue_bao_khong_tich_hen",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao triển khai không tích hẹn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai trên đường dây có sẵn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_3_gio_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤3h trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_10_gio_duong_day_mo",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤10h trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_24h_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤24h trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_3h_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤3h trên đường dây có sẵn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_10h_duong_day_co_sa",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤10h trên đường dây có sẵn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_24h_duong_day_co_sa",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤24h trên đường dây có sẵn"
+            },
+            {
+                "column_name": "tong_thue_bao_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao có hẹn"
+            },
+            {
+                "column_name": "so_luong_thue_bao_trien_khai_dung_hen",
+                "data_type": "smallint",
+                "description": "Số thuê bao triển khai đúng hẹn"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_3h_duong_day_moi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤3h trên đường dây mới. Cách tính: (Số TB không hẹn xử lý ≤3h / Tổng TB không hẹn) * 100%"
+            },
+            {
+                "column_name": "thuc_hien_kpi_trien_khai_moi_10h_duong_day_moi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤10h trên đường dây mới. Cách tính: (Số TB không hẹn xử lý ≤10h / Tổng TB không hẹn) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_24h_duong_day_moi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤24h trên đường dây mới. Cách tính: (Số TB không hẹn xử lý ≤24h / Tổng TB không hẹn) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_3h_duong_day_co_san_phan_tra",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤3h trên đường dây có sẵn. Cách tính: (Số TB không hẹn xử lý ≤3h / Tổng TB không hẹn) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_10h_duong_day_co_san_phan_tr",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤10h trên đường dây có sẵn. Cách tính: (Số TB không hẹn xử lý ≤10h / Tổng TB không hẹn) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_24h_duong_day_co_san_phan_tr",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤24h trên đường dây có sẵn. Cách tính: (Số TB không hẹn xử lý ≤24h / Tổng TB không hẹn) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_dung_hen_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai đúng hẹn. Cách tính: (Số TB xử lý đúng hẹn / Tổng TB có hẹn) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_3h_sanmoi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI 3h sản mới. Cách tính: (Số TB xử lý ≤3h / Tổng TB sản mới) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_10h_sanmoi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI 10h sản mới. Cách tính: (Số TB xử lý ≤10h / Tổng TB sản mới) * 100%"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_24h_sanmoi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI 24h sản mới. Cách tính: (Số TB xử lý ≤24h / Tổng TB sản mới) * 100%"
+            },
+            {
+                "column_name": "target_trien_khai_moi_3h_phan_tram",
+                "data_type": "double precision",
+                "description": "Mục tiêu KPI triển khai mới 3h (%)"
+            },
+            {
+                "column_name": "target_trien_khai_moi_10h_phan_tram",
+                "data_type": "double precision",
+                "description": "Mục tiêu KPI triển khai mới 10h (%)"
+            },
+            {
+                "column_name": "target_trien_khai_moi_24h_phan_tram",
+                "data_type": "smallint",
+                "description": "Mục tiêu KPI triển khai mới 24h (%)"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_3h_duong_day_moi",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai mới 3h - đường dây mới"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_10h_duong_day_moi",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai mới 10h - đường dây mới"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_24h_duong_day_moi",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai mới 24h - đường dây mới"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_3h_duong_day_co_san",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai mới 3h - đường dây có sẵn"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_10h_duong_day_co_san",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai mới 10h - đường dây có sẵn"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_24h_duong_day_co_san",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai mới 24h - đường dây có sẵn"
+            },
+            {
+                "column_name": "danh_gia_kpi_trien_khai_moi_kpi_dung_hen",
+                "data_type": "character varying",
+                "description": "Đánh giá KPI triển khai đúng hẹn"
+            }
+        ],
+        "sample_questions": [
+            "Tổng triển khai mới trên đường dây mới năm 2024 theo từng tháng là bao nhiêu?",
+            "Tổng triển khai mới trên đường dây có sẵn năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây mới năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây có sẵn năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Tổng triển khai mới trên đường dây có sẵn của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tổng triển khai mới trên đường dây có mới của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây mới của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây có sẵn của AGG năm 2024 theo từng tháng là bao nhiêu?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_kpi_tkm_cdbr_tinh",
+        "description": "Tổng hợp KPI phát triền mới khách hàng cố định băng rộng mức tỉnh",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "khu_vuc",
+                "data_type": "character varying",
+                "description": "Khu vực"
+            },
+            {
+                "column_name": "ten_tinh",
+                "data_type": "character varying",
+                "description": "Tên tỉnh"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh"
+            },
+            {
+                "column_name": "tong_thue_bao_nghiem_thu",
+                "data_type": "integer",
+                "description": "Tổng số thuê bao nghiệm thu"
+            },
+            {
+                "column_name": "tong_thue_bao_nghiem_thu_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao nghiệm thu trên đường dây mới"
+            },
+            {
+                "column_name": "tong_thue_bao_nghiem_thu_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao nghiệm thu trên đường dây có sẵn"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_khong_hen",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn (không hẹn)"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_khong_hen_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn không hẹn trên đường dây mới"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_khong_hen_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn không hẹn trên đường dây có sẵn"
+            },
+            {
+                "column_name": "tong_thue_bao_ton_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao tồn có hẹn"
+            },
+            {
+                "column_name": "tong_trien_khai_thue_bao_khong_tich_hen",
+                "data_type": "integer",
+                "description": "Tổng số thuê bao triển khai không tích hẹn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai trên đường dây có sẵn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_3_gio_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤3h trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_10_gio_duong_day_mo",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤10h trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_24h_duong_day_moi",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤24h trên đường dây mới"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_3h_duong_day_co_san",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤3h trên đường dây có sẵn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_10h_duong_day_co_sa",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤10h trên đường dây có sẵn"
+            },
+            {
+                "column_name": "so_luong_trien_khai_thue_bao_khong_tich_hen_24h_duong_day_co_sa",
+                "data_type": "smallint",
+                "description": "Số thuê bao không tích hẹn triển khai ≤24h trên đường dây có sẵn"
+            },
+            {
+                "column_name": "tong_thue_bao_co_hen",
+                "data_type": "smallint",
+                "description": "Tổng số thuê bao có hẹn"
+            },
+            {
+                "column_name": "so_luong_thue_bao_trien_khai_dung_hen",
+                "data_type": "smallint",
+                "description": "Số thuê bao triển khai đúng hẹn"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_3h_duong_day_moi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤3h trên đường dây mới (%)"
+            },
+            {
+                "column_name": "thuc_hien_kpi_trien_khai_moi_10h_duong_day_moi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤10h trên đường dây mới (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_24h_duong_day_moi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤24h trên đường dây mới (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_3h_duong_day_co_san_phan_tra",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤3h trên đường dây có sẵn (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_10h_duong_day_co_san_phan_tr",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤10h trên đường dây có sẵn (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_24h_duong_day_co_san_phan_tr",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai mới ≤24h trên đường dây có sẵn (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_trien_khai_moi_dung_hen_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI triển khai đúng hẹn (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_3h_sanmoi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI 3h sản mới (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_10h_sanmoi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI 10h sản mới (%)"
+            },
+            {
+                "column_name": "ty_le_thuc_hien_kpi_24h_sanmoi_phan_tram",
+                "data_type": "double precision",
+                "description": "Tỷ lệ KPI 24h sản mới (%)"
+            },
+            {
+                "column_name": "so_tb_cskh_chu_dong",
+                "data_type": "smallint",
+                "description": "Số thuê bao CSKH chủ động"
+            },
+            {
+                "column_name": "ti_le_tb_cskh_chu_dong_tong_nghiem_thu",
+                "data_type": "double precision",
+                "description": "Tỷ lệ thuê bao CSKH chủ động trên tổng nghiệm thu (%)"
+            }
+        ],
+        "sample_questions": [
+            "Tổng triển khai mới trên đường dây mới năm 2024 theo từng tháng là bao nhiêu?",
+            "Tổng triển khai mới trên đường dây có sẵn năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây mới năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây có sẵn năm 2024 của Toàn quốc theo từng tháng là bao nhiêu?",
+            "Tổng triển khai mới trên đường dây có sẵn của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tổng triển khai mới trên đường dây có mới của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây mới của AGG năm 2024 theo từng tháng là bao nhiêu?",
+            "Tỷ lệ triển khai mới trong 3h với đường dây có sẵn của AGG năm 2024 theo từng tháng là bao nhiêu?"
+        ]
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_omni_cdbr_ft",
+        "description": "Khảo sát đánh giá mức độ hài lòng của KH qua kênh OMNI mảng CĐBR(TKM và XLSC)",
+        "columns": [
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            },
+            {
+                "column_name": "ma_nhan_vien",
+                "data_type": "character varying",
+                "description": "Mã nhân viên"
+            },
+            {
+                "column_name": "ten_tinh",
+                "data_type": "character varying",
+                "description": "Tên tỉnh"
+            },
+            {
+                "column_name": "ten_huyen",
+                "data_type": "character varying",
+                "description": "Tên huyện"
+            },
+            {
+                "column_name": "user_nhan_vien",
+                "data_type": "character varying",
+                "description": "Người dùng nhân viên"
+            },
+            {
+                "column_name": "so_luot_khao_sat_muc_do_hai_long_xlsc_cua_khach_hang_phan_hoi_d",
+                "data_type": "smallint",
+                "description": "Số lượt khảo sát mức độ hài lòng XLCS của khách hàng phản hồi đồng ý"
+            },
+            {
+                "column_name": "so_luot_khao_sat_muc_do_hai_long_xlsc_cua_khach_hang_phan_hoi_k",
+                "data_type": "smallint",
+                "description": "Số lượt khảo sát mức độ hài lòng XLCS của khách hàng phản hồi không đồng ý"
+            },
+            {
+                "column_name": "so_luot_khao_sat_muc_do_hai_long_xlsc_cua_khach_hang_phan_hoi_b",
+                "data_type": "smallint",
+                "description": "Số lượt khảo sát mức độ hài lòng XLCS của khách hàng phản hồi bình thường"
+            },
+            {
+                "column_name": "tong_so_luot_khao_sat_muc_do_hai_long_xlsc",
+                "data_type": "smallint",
+                "description": "Tổng số lượt khảo sát mức độ hài lòng XLCS"
+            },
+            {
+                "column_name": "ty_le_khach_hang_hai_long_khi_xlsc",
+                "data_type": "double precision",
+                "description": "Tỷ lệ khách hàng hài lòng khi xử lý sự cố (%)"
+            },
+            {
+                "column_name": "so_luot_xlsc_khac",
+                "data_type": "double precision",
+                "description": "Số lượt XLCS khác"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_ko_dong_y_loi_thai_do_khi_xlsc",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân không đồng ý do lỗi thái độ khi XLCS"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_ko_dong_y_ly_do_khac_khi_xlsc",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân không đồng ý do lý do khác khi XLCS"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_ko_dong_y_nghiep_vu_cua_nvkt_khi_x",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân không đồng ý do nghiệp vụ của NVKT khi XLCS"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_ko_dong_y_nvkt_dong_ao_khi_xlsc",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân không đồng ý do NVKT đông ảo khi XLCS"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_ko_dong_y_thoi_gian_xu_ly_lau_khi_",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân không đồng ý do thời gian xử lý lâu khi XLCS"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_ko_dong_y_y_thuc_tac_phong_khi_xls",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân không đồng ý do ý thức tác phong khi XLCS"
+            },
+            {
+                "column_name": "so_luot_khao_sat_muc_do_hai_long_cua_khach_hang_phan_hoi_dong_y",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát mức độ hài lòng của khách hàng phản hồi đồng ý khi phát triển mới"
+            },
+            {
+                "column_name": "so_luot_khao_sat_muc_do_hai_long_cua_khach_hang_phan_hoi_khong_",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát mức độ hài lòng của khách hàng phản hồi không đồng ý khi phát triển mới"
+            },
+            {
+                "column_name": "so_luot_khao_sat_muc_do_hai_long_cua_khach_hang_phan_hoi_binh_t",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát mức độ hài lòng của khách hàng phản hồi bình thường khi phát triển mới"
+            },
+            {
+                "column_name": "tong_so_luot_khao_sat_muc_do_hai_long_khi_phat_trien_moi",
+                "data_type": "bigint",
+                "description": "Tổng số lượt khảo sát mức độ hài lòng khi phát triển mới"
+            },
+            {
+                "column_name": "ty_le_khach_hang_hai_long_khi_phat_trien_moi",
+                "data_type": "double precision",
+                "description": "Tỷ lệ khách hàng hài lòng khi phát triển mới (%)"
+            },
+            {
+                "column_name": "so_luot_khac_tkm",
+                "data_type": "double precision",
+                "description": "Số lượt khác TKM"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_kh_ko_dong_y_thoi_gian_lap_dat_lau",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân KH không đồng ý do thời gian lắp đặt lâu khi phát triển mới"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_kh_ko_dong_y_nghiep_vu_cua_nvkt_kh",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân KH không đồng ý do nghiệp vụ của NVKT khi phát triển mới"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_kh_ko_dong_y_loi_thai_do_khi_phat_",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân KH không đồng ý do lỗi thái độ khi phát triển mới"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_kh_ko_dong_y_nvkt_dong_ao_khi_phat",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân KH không đồng ý do NVKT đông ảo khi phát triển mới"
+            },
+            {
+                "column_name": "so_luot_khao_sat_nguyen_nhan_kh_ko_dong_y_ly_do_khac_khi_phat_t",
+                "data_type": "bigint",
+                "description": "Số lượt khảo sát nguyên nhân KH không đồng ý do lý do khác khi phát triển mới"
+            }
+        ],
+        "sample_questions": []
+    },
+    {
+        "table_name": "vcc_vhkt.vhkt_import_dt_tp_vtt_2",
+        "description": "Dữ liệu oanh thu, tiền phạt VTT(Viettel Telecom) 2",
+        "columns": [
+            {
+                "column_name": "ngay",
+                "data_type": "character varying",
+                "description": "Ngày ghi nhận dữ liệu"
+            },
+            {
+                "column_name": "ma_tinh",
+                "data_type": "character varying",
+                "description": "Mã tỉnh"
+            },
+            {
+                "column_name": "day_duy_tri",
+                "data_type": "double precision",
+                "description": "Số đôi dây duy trì trong kỳ"
+            },
+            {
+                "column_name": "doanh_thu_khac",
+                "data_type": "bigint",
+                "description": "Doanh thu từ các nguồn khác ngoài doanh thu chính"
+            },
+            {
+                "column_name": "duy_tri_home",
+                "data_type": "integer",
+                "description": "Doanh thu duy trì dịch vụ Home"
+            },
+            {
+                "column_name": "duy_tri_cam",
+                "data_type": "integer",
+                "description": "Doanh thu duy trì dịch vụ Camera"
+            },
+            {
+                "column_name": "ptm_home",
+                "data_type": "integer",
+                "description": "Doanh thu phát triển mới dịch vụ HomeWifi"
+            },
+            {
+                "column_name": "ptm_cam",
+                "data_type": "integer",
+                "description": "Doanh thu phát triển mới dịch vụ Camera"
+            },
+            {
+                "column_name": "doanh_thu_duy_tri_cdbr",
+                "data_type": "bigint",
+                "description": "Doanh thu duy trì dịch vụ CDBR"
+            },
+            {
+                "column_name": "doanh_thu_tkm_cdbr",
+                "data_type": "integer",
+                "description": "Doanh thu phát triển mới CDBR"
+            },
+            {
+                "column_name": "tong_dt",
+                "data_type": "bigint",
+                "description": "Tổng doanh thu trong kỳ. Cách tính bẳng tổng tất cả các khoản doanh thu"
+            },
+            {
+                "column_name": "phat_kpi_duy_tri_cdbr",
+                "data_type": "integer",
+                "description": "Phạt KPI duy trì CDBR"
+            },
+            {
+                "column_name": "phat_ptm_cdbr",
+                "data_type": "integer",
+                "description": "Phạt phát triển mới CDBR"
+            },
+            {
+                "column_name": "phat_loi_trai_nghiem_omnichannel",
+                "data_type": "integer",
+                "description": "Phạt lỗi trải nghiệm Omnichannel"
+            },
+            {
+                "column_name": "phat_loi_lap_3_lan",
+                "data_type": "double precision",
+                "description": "Phạt lỗi lặp lại hơn 3 lần"
+            },
+            {
+                "column_name": "phat_loi_su_co_phat_sinh_sau_715_ngay",
+                "data_type": "integer",
+                "description": "Phạt lỗi sự cố phát sinh sau 7 hoặc 15 ngày"
+            },
+            {
+                "column_name": "phat_loi_thi_chuyen_mon_khong_dat",
+                "data_type": "integer",
+                "description": "Phạt lỗi thi chuyên môn không đạt"
+            },
+            {
+                "column_name": "phat_roi_mang",
+                "data_type": "double precision",
+                "description": "Phạt do rời mạng"
+            },
+            {
+                "column_name": "phat_thu_hoi_thiet_bi",
+                "data_type": "double precision",
+                "description": "Phạt thu hồi thiết bị"
+            },
+            {
+                "column_name": "phat_rut_cam_port",
+                "data_type": "double precision",
+                "description": "Phạt rút/cắm port"
+            },
+            {
+                "column_name": "phat_loi_cskh_tich_hen_tich_huy",
+                "data_type": "integer",
+                "description": "Phạt lỗi CSKH (tích hẹn, tích hủy)"
+            },
+            {
+                "column_name": "phat_loi_sai_vat_tu_quy_cach",
+                "data_type": "double precision",
+                "description": "Phạt lỗi sai vật tư/quy cách"
+            },
+            {
+                "column_name": "tong_phat",
+                "data_type": "double precision",
+                "description": "Tổng các khoản phạt Cách tính bẳng tổng tất cả các khoản phạt"
+            },
+            {
+                "column_name": "nam",
+                "data_type": "smallint",
+                "description": "Năm đánh giá"
+            },
+            {
+                "column_name": "thang",
+                "data_type": "smallint",
+                "description": "Tháng đánh giá"
+            }
+        ],
+        "sample_questions": [
+            "Tổng tiền phạt năm 2024 là bao nhiêu",
+            "Tổng tiền phạt của tỉnh AGG năm 2024 là bao nhiêu",
+            "Tiền phạt của tỉnh AGG theo từng tháng năm 2024",
+            "Tiền phạt KPI duy trì của AGG năm 2024 là bao nhiêu",
+            "Tiền phạt KPI duy trì của AGG theo từng tháng năm 2024",
+            "Tiền phạt KPI triển khai mới của AGG năm 2024 là bao nhiêu",
+            "Tiền phạt KPI triển khai mới của AGG theo từng tháng năm 2024",
+            "Tiền phạt lỗi ý thức, thái độ của AGG năm 2024 là bao nhiêu",
+            "Tiền phạt lỗi ý thức thái độ của AGG theo từng tháng năm 2024",
+            "Tiền phạt rời mạng của AGG năm 2024 là bao nhiêu",
+            "Tiền phạt rời mạng của AGG theo từng tháng năm 2024",
+            "Tiền phạt lỗi …. của AGG năm 2024 là bao nhiêu"
+        ]
+    }
+]
